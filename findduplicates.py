@@ -12,6 +12,14 @@ def myls(path):
     return filenames, fullnames
 
 print()
-print(myls(sys.argv[1]))
+filenames = []
+#print(myls(sys.argv[1]))
 for i in sys.argv[1:]:
-    mylss.append(set(myls(i)))
+    print(i)
+    filenames.append(set(myls(i)[0]))
+print(len(myls(sys.argv[1])[0]), len(set(myls(sys.argv[1])[0])))
+intersection = filenames[0]
+for i in filenames[1:]:
+    intersection = intersetion & i
+
+print(intersection)
