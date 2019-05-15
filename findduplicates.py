@@ -11,7 +11,8 @@ def myls(path):
         filenames[ind] =i[i.rfind('/')+1:]
     return filenames, fullnames
 
-print()
 print(myls(sys.argv[1]))
 for i in sys.argv[1:]:
     mylss.append(set(myls(i)))
+
+print('Done.')
