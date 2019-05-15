@@ -11,7 +11,6 @@ def myls(path):
         filenames[ind] =i[i.rfind('/')+1:]
     return filenames, fullnames
 
-print()
 filenames = []
 #print(myls(sys.argv[1]))
 for i in sys.argv[1:]:
@@ -23,3 +22,4 @@ for i in filenames[1:]:
     intersection = intersetion & i
 
 print(intersection)
+print('Done.')
